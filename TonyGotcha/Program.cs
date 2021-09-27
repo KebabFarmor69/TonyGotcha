@@ -32,8 +32,11 @@ namespace TonyGotcha
             Console.ForegroundColor = ConsoleColor.White;
             System.Console.WriteLine("Now it's time to interact with " + t.name + ". What would you like to do?");
 
+            while (t.GetAlive() = true)
+            {     
+            
             Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.WriteLine("     (a)Teach a new word\n     (b)Say hello\n     (c)Feed\n     (d)Nothing");
+            System.Console.WriteLine("     [a]Teach a new word\n     [b]Say hello\n     [c]Give a drink\n     [d]Nothing");
 
             string answer = Console.ReadLine();
 
@@ -41,6 +44,9 @@ namespace TonyGotcha
             {
                 case "a":
 
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                    Console.WriteLine("LEARN:");
                     string addword;
 
                     addword = Console.ReadLine();
@@ -66,13 +72,14 @@ namespace TonyGotcha
 
                     break;
                 default:
+                    break;
+
+
+            }
             }
 
 
-
-            t.Teach("Heyyyyyyyyy...");
-            t.Teach("Wassaaaapp... *Burp*");
-            //t.Hi();
+            
             Console.ReadLine();
 
 
